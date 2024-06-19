@@ -6,9 +6,15 @@ import taskRoutes from "./routes/task.routes"
 import userRoutes from "./routes/user.routes"
 
 const application = express()
+const corsOptions = {
+    origin: '*',
+    methods: ['POST', 'GET', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}
+application.use(cors(corsOptions));
 
 application.use(express.json())
-application.use(cors())
+
 
 const PORT = 1337
 
