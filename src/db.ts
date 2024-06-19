@@ -3,7 +3,7 @@ import mongoose from "mongoose"
 const connectToDatabase = async () => {
   try {
     const connection = await mongoose.connect(
-      "mongodb+srv://omkhetwal:qfxoQkUzbzQWaoMo@youtube.lothdki.mongodb.net/blossom-app?retryWrites=true&w=majority"
+      "mongodb+srv://harshitj:root@travel-cluster.1jjduhq.mongodb.net/?retryWrites=true&w=majority&appName=travel-cluster"
     )
     if (connection) {
       console.log("Connection established")
